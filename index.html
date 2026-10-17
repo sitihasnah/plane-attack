@@ -109,7 +109,7 @@
         <div class="glass-card rounded-2xl px-5 py-2 text-right shadow-lg">
           <div class="text-[11px] uppercase tracking-wider text-yellow-300 font-bold">Markah</div>
           <div id="hud-score" class="font-title text-2xl md:text-3xl text-yellow-400">0</div>
-          <div id="hud-combo" class="text-xs text-emerald-300 font-bold">Kuiz Betul: 0/6</div>
+          <div id="hud-combo" class="text-xs text-emerald-300 font-bold">Kuiz Betul: 0/8</div>
         </div>
       </div>
     </div>
@@ -170,7 +170,7 @@
         </div>
       </div>
 
-      <!-- Pilih Modul Soalan (Baru!) -->
+      <!-- Pilih Modul Soalan -->
       <div class="mb-4">
         <label class="block text-xs font-bold uppercase tracking-wider text-cyan-300 mb-2">2. Pilih Modul Pembelajaran / Soalan</label>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5" id="module-list">
@@ -197,7 +197,7 @@
         </div>
       </div>
 
-      <!-- Pilih Pilot & Skuadron dalam 2 Kolum Grid -->
+      <!-- Pilih Pilot & Skuadron -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-cyan-300 mb-2">3. Pilih Juruterbang</label>
@@ -282,7 +282,7 @@
     <div class="glass-card rounded-3xl max-w-lg w-full p-6 md:p-8 text-center border-2 border-cyan-400 shadow-2xl my-auto">
       <div id="end-icon" class="text-5xl mb-2">🏆</div>
       <h2 id="end-title" class="font-title text-3xl text-yellow-300 mb-1">MASA TAMAT!</h2>
-      <p id="end-subtitle" class="text-sm text-slate-300 mb-5">Hebat! Anda telah menyelesaikan cabaran 90 saat.</p>
+      <p id="end-subtitle" class="text-sm text-slate-300 mb-5">Hebat! Anda telah menyelesaikan cabaran.</p>
 
       <div class="bg-slate-900/90 rounded-2xl p-4 border border-white/15 text-left space-y-2 mb-5 text-sm">
         <div class="flex justify-between"><span class="text-slate-400">Nama Pemain:</span> <span id="end-player" class="font-bold text-white">-</span></div>
@@ -388,7 +388,7 @@
     let score = 0;
     let lives = 3;
     let correctQuizzes = 0;
-    let timeLeft = 90; // Mod Masa 90 Saat
+    let timeLeft = 90;
     let timerInterval = null;
 
     const TARGET_LEVEL2_QUIZZES = 3;
@@ -401,7 +401,8 @@
     const LANES = [-7.5, -2.5, 2.5, 7.5];
     let currentLane = 1;
 
-    let googleScriptUrl = "https://script.google.com/macros/s/AKfycbyGizUHMuNxjSiniiApqLHkPN53SOPF2rlp052PzeBl6sIQWbLOp_OtPExHZUlAoq-h/exec";
+    // URL Google Apps Script Rasmi Anda
+    let googleScriptUrl = "https://script.google.com/macros/s/AKfycbx7dfQgAzlRMuXm1F-zwBP57O9bXn8mWWIrnBD5e5IsN2ix6R0wNbGhIGeahZlckNUO/exec";
 
     // =========================================================================
     // 2. AUDIO SINTESIS
